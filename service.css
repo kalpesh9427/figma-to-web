@@ -1,0 +1,150 @@
+/* ============================================ */
+/* SERVICES SECTION STYLES */
+/* ============================================ */
+
+.services-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: #000;
+    border-radius: 30px;
+    max-width: 2100px;
+    margin: 20px auto;
+    color: white;
+}
+
+.services-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services-header {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.services-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    color: white;
+}
+
+.services-section .highlight {
+    color: #ff4d00;
+}
+
+.services-header p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+/* Service Cards */
+.service-card {
+    background: #3a3a3a;
+    border-radius: 20px;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-card.featured {
+    background: linear-gradient(135deg, #ff4d00, #ff6a00);
+    transform: translateY(-20px);
+}
+
+.service-card.featured:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 30px 60px rgba(255, 77, 0, 0.3);
+}
+
+/* Card Header */
+.card-header {
+    padding: 30px 30px 20px 30px;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+}
+
+.service-card:not(.featured) .card-header h3 {
+    color: #e0e0e0;
+}
+
+/* Card Image (Fixed for iframe) */
+.card-image {
+    position: relative;
+    margin: 0 20px 20px 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: auto;
+}
+
+.card-image iframe,
+.card-image img {
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+.card-image iframe {
+    min-height: 350px; /* Tall enough for LinkedIn post */
+}
+
+.card-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* Arrow Icon (if needed) */
+.arrow-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.featured-arrow {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover .arrow-icon {
+    transform: scale(1.1);
+    background: rgba(255, 77, 0, 0.9);
+}
+
+.service-card.featured:hover .arrow-icon {
+    background: rgba(255, 255, 255, 0.3);
+}
